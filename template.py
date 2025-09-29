@@ -96,7 +96,6 @@ if __name__ == "__main__":
     if workflow( "test", workflows ) :
 
         # for the test workflow we also do something more (just for demo)
-
         demo_p3.execute()
         jawm.Process.wait()
         print("Test completed.")
