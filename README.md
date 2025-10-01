@@ -6,5 +6,5 @@ For more information on jawm please visit [jawm's repo](https://github.com/mpg-a
 
 Example usage:
 ```
-jawm template.py demo -p ./test/yaml/docker.yaml
+jawm template.py demo -p ./yaml/docker.yaml
 ```
