@@ -1,11 +1,8 @@
+# a docker yaml template
 - scope: process
   name: "template"
   container: "ubuntu:24.04"
   environment: "docker"
-  # automated_mount: False
-  # docker_run_as_user: True
-  # environment_docker:
-  #     "-v": ["/nexus:/nexus"]
   parallel: False
   var:
     extra_args: ""
