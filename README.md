@@ -6,5 +6,9 @@ For more information on jawm please visit [jawm's repo](https://github.com/mpg-a
 
 Example usage:
 ```
-jawm template.py demo -p ./yaml/docker.yaml
+# docker
+jawm template.py template -p ./yaml/docker.yaml
+
+# slrum and apptainer
+jawm template.py template -p ./yaml/vars.yaml ./yaml/hpc.yaml
 ```

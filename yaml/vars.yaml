@@ -1,0 +1,6 @@
+- scope: process
+  name: "template"
+  var:
+    extra_args: ""
+    my_demo_argument: "This is just a demo."
+    mk.output: "./test/test-output"

@@ -1,0 +1,6 @@
+- scope: process
+  name: "template"
+  container: "docker://ubuntu:24.04"
+  environment: "apptainer"
+  manager: "slurm"
+  manager_slurm: { "-p":"cluster,dedicated", "--mem":"20GB", "-t":"1:00:00", "-c":"8" }
