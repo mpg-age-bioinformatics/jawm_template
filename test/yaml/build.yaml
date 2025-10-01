@@ -1,7 +1,0 @@
-- scope: process
-  name: "template"
-  automated_mount: False
-  docker_run_as_user: True
-  environment_docker:
-      "-v": ["/nexus:/nexus"]
-  parallel: False
