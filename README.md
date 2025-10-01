@@ -12,3 +12,8 @@ jawm template.py template -p ./yaml/docker.yaml
 # slrum and apptainer
 jawm template.py template -p ./yaml/vars.yaml ./yaml/hpc.yaml
 ```
+
+Running tests:
+```
+jawm-dev test
+```
