@@ -42,7 +42,7 @@ echo "{{extra_args}} {{my_demo_argument}}" 2>&1 | tee {{mk.output}}/demo.txt
 template_p2=jawm.Process( 
     name="template_p2",
     script="""#!/bin/bash
-echo "Template demo echo process" 2>&1 | tee {{mk.output}}/demo.txt
+echo "Template demo echo process"
 """  
 )
 
