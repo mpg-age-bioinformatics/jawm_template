@@ -70,4 +70,4 @@ if __name__ == "__main__":
         print("Test completed.")
 
 
-sys.exit(0)
+    sys.exit(0)
