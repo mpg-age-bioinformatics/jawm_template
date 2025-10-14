@@ -1,6 +1,6 @@
 import jawm
 
-template=jawm.Process( 
+template_p=jawm.Process( 
     name="template",
     script="""#!/bin/bash
 echo "{{extra_args}} {{my_demo_argument}}" 2>&1 | tee {{mk.output}}/demo.txt
@@ -52,7 +52,7 @@ if __name__ == "__main__":
     if workflow( ["main","template","test"], workflows ) :
 
         # execute process
-        template.execute()
+        template_p.execute()
 
         # # execute a process with dependencies
         # demo_p2.depends_on=[demo_p1.hash]
@@ -62,7 +62,7 @@ if __name__ == "__main__":
         jawm.Process.wait()
 
         # print the output
-        print(template.get_output())
+        print(template_p.get_output())
 
     if workflow( "test", workflows ) :
 
