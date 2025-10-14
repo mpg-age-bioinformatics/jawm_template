@@ -4,3 +4,7 @@
     extra_args: ""
     my_demo_argument: "This is just a demo."
     mk.output: "./test/test-output"
+
+- scope: global
+  var:
+    mk.output: "./test/test-output"

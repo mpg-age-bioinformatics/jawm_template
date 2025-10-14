@@ -5,11 +5,10 @@
   var:
     extra_args: ""
     my_demo_argument: "This is just a template."
-    mk.output: "./test/test-output"
 
-# - scope: global
-#   var:
-#     mk.output: "./test/test-output"
+- scope: global
+  var:
+    mk.output: "./test/test-output"
  
 - scope: hash
   include: ./test/test-output/demo.txt
