@@ -3,7 +3,7 @@ import jawm
 template_p1=jawm.Process( 
     name="template_p1",
     script="""#!/bin/bash
-echo "{{extra_args}} {{my_demo_argument}}" 2>&1 | tee {{mk.output}}/demo.txt
+echo "{{extra_args}} {{my_demo_argument}}" 2>&1 | tee {{output}}/demo.txt
 """,
 
     # arguments for the script above :
@@ -14,6 +14,12 @@ echo "{{extra_args}} {{my_demo_argument}}" 2>&1 | tee {{mk.output}}/demo.txt
     #     "mk.output":"<output_folder>", # the prefix "mk." leads to the creation of this folder and volume mapping if you are using containers
                                          # simple file mapping can be achieved with the prefix map. eg. map.my_file.txt
     # },
+
+    desc={
+        "extra_args": "use this if you want to add not preset arguments",
+        "my_demo_argument":"Some text that will be printed to the screen.", 
+        "output":"Folder for output", # the prefix "mk." leads to the creation of this folder and volume mapping if you are using containers
+    },
     
     # example arguments for jawn
 
