@@ -1,7 +1,7 @@
 import jawm
 
-template_p1=jawm.Process( 
-    name="template_p1",
+_template_p1=jawm.Process( 
+    name="_template_p1",
     script="""#!/bin/bash
 echo "{{extra_args}} {{my_demo_argument}}" 2>&1 | tee {{output}}/demo.txt
 """,
@@ -45,10 +45,10 @@ echo "{{extra_args}} {{my_demo_argument}}" 2>&1 | tee {{output}}/demo.txt
   
 )
 
-template_p2=jawm.Process( 
-    name="template_p2",
+_template_p2=jawm.Process( 
+    name="_template_p2",
     script="""#!/bin/bash
-echo "Template demo echo process"
+echo "_template demo echo process"
 """  
 )
 
@@ -59,24 +59,24 @@ if __name__ == "__main__":
     import sys
     from jawm.utils import workflow
 
-    workflows, args, unknown_args = jawm.utils.parse_arguments(["main","template","test"],)
+    workflows, var, args, unknown_args = jawm.utils.parse_arguments(["main","_template","test"],)
 
     # usage: 
 
-    if workflow( ["main","template","test"], workflows ) :
+    if workflow( ["main","_template","test"], workflows ) :
 
         # execute process
-        template_p1.execute()
+        _template_p1.execute()
 
         # # execute a process with dependencies
-        # template_p2.depends_on=[template_p1.hash]
-        # template_p2.execute()
+        # _template_p2.depends_on=[_template_p1.hash]
+        # _template_p2.execute()
 
         # wait for all above processes to complete
         jawm.Process.wait()
 
         # print the output
-        print(template_p1.get_output())
+        print(_template_p1.get_output())
 
     if workflow( "test", workflows ) :
 

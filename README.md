@@ -1,4 +1,4 @@
-# jawm_template
+# jawm Template
 
 This is a jawm template module.
 
@@ -14,10 +14,10 @@ Example usage:
 jawm-test -r download
 
 # docker
-jawm template.py template -p ./yaml/docker.yaml
+jawm template.py _template -p ./yaml/docker.yaml
 
 # slrum and apptainer
-jawm template.py template -p ./yaml/vars.yaml ./yaml/hpc.yaml
+jawm template.py _template -p ./yaml/vars.yaml ./yaml/hpc.yaml
 ```
 
 Testing this module on your system's python and jawm installation:

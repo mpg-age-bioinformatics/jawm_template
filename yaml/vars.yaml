@@ -1,5 +1,5 @@
 - scope: process
-  name: "template"
+  name: "_template*"
   var:
     extra_args: ""
     my_demo_argument: "This is just a demo."

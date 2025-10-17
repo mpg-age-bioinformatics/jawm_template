@@ -1,10 +1,10 @@
 - scope: process
-  name: "template"
+  name: "_template*"
   container: "ubuntu:24.04"
   environment: "docker"
   var:
     extra_args: ""
-    my_demo_argument: "This is just a template."
+    my_demo_argument: "This is just a _template demo."
 
 - scope: global
   var:
