@@ -9,7 +9,6 @@ The file `tests.txt` lists all tests that should be performed:
 ```
 #jawm_file.py;workflow;parameters.file1.yaml,parameters.file2.yaml;"Test name";test_hash
 demo.py;test;./test/yaml/test.yaml;"Main workflow test";ce67151f2a16c1ee96e65c5eec6e7b07288f003fb3affce6f08568cf11a1525f
-# blank last line required
 ```
 The `test_hash` is created based on the set of files or folders you define as the golden reference for your worklow. 
 These are defined in `yaml` eg. `./yaml/test.yaml` file under the `- scope: hash` :
@@ -20,7 +19,7 @@ These are defined in `yaml` eg. `./yaml/test.yaml` file under the `- scope: hash
 ```
 Initally, on your first test, you won't have an hash, leave it blanck and let jwam fill the value for you.
 ```
-jawm-dev test
+jawm-test
 ``` 
 Additionaly, these hashes are stored under `./logs/jwam_hashes/<module_name>_user_defined.history` and 
 `./logs/jwam_hashes/<module_name>.hash` for the latest hash.
