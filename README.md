@@ -20,8 +20,4 @@ jawm template.py _template -p ./yaml/docker.yaml
 jawm template.py _template -p ./yaml/vars.yaml ./yaml/hpc.yaml
 ```
 
-Testing this module on your system's python and jawm installation:
-```
-jawm-test --python_versions system --jawm_versions local
-```
-More information on running and developing tests can be found in `./test/README.md`.
+Additional jawm workflows are available [here (GitHub.com)](https://github.com/mpg-age-bioinformatics?q=jawm_&type=all&language=&sort=).
