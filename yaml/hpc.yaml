@@ -3,5 +3,12 @@
   name: "_template*"
   container: "docker://ubuntu:24.04"
   environment: "apptainer"
+  environment_apptainer: { "-B":"/nexus:/nexus" }
+  automated_mount: False
   manager: "slurm"
-  manager_slurm: { "-p":"cluster,dedicated", "--mem":"20GB", "-t":"1:00:00", "-c":"8" }
+  manager_slurm: { "-p":"cluster,dedicated"}
+  # before_script: "module load apptainer"
+  # manager_slurm: {"--ntasks-per-core":"2", "-p":"general,small" }
+
+# - includes: 
+#     - nexus.apptainer.yaml

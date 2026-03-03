@@ -1,0 +1,3 @@
+# - scope: process
+#   name: _template_p1
+#   container: /nexus/posix0/MAGE-flaski/service/images/jawm/pyega3-5.2.0.sif

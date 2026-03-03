@@ -1,7 +1,0 @@
-# a slurm and apptainer template for our raven named cluster
-- scope: process
-  name: "_template*"
-  container: "docker://ubuntu:24.04"
-  environment: "apptainer"
-  manager: "slurm"
-  manager_slurm: { "-p":"general,small", "--mem":"20GB", "-t":"1:00:00", "-c":"8" }

@@ -24,12 +24,11 @@ echo "{{extra_args}} {{my_demo_argument}}" 2>&1 | tee {{output}}/demo.txt
     # example arguments for jawn
 
     # manager="slurm",
-    # manager_slurm={
-    #     "-p":"cluster,dedicated", 
-    #     "--mem":"20GB", 
-    #     "-t":"1:00:00", 
-    #     "-c":"8" 
-    # },
+    manager_slurm={
+        "--mem":"20GB", 
+        "-t":"1:00:00", 
+        "-c":"8" 
+    },
 
     # container="mpgagebioinformatics/fastqc:0.11.9",
     # environmnent="apptainer",
